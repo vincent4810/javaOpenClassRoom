@@ -1,4 +1,4 @@
-public class OpenClassRooms {
+public class ManipulationVariables {
     public static void main(String[] args){
         int agePersonne = 19;
 
