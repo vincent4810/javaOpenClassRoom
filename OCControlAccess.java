@@ -6,8 +6,8 @@ public class OCControlAccess {
 }
 
 class Exemple {
-    // private / protected / public   class / variables / fonction.
-    private static String text = "hello World";
+    // private / protected / public / package protected /////  class / variables / fonction.
+    protected static String text = "hello World";
 
     public static void printText(){
         System.out.println(text);
