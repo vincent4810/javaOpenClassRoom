@@ -20,6 +20,23 @@ public class OCBoucle {
             
             print(e);
         }
+
+        int[] secondArray = { 10, 20, 30, 40, 50, 60, 70, 80, 90};
+
+        for(int i = 0; i <secondArray.length; i++){
+            if(secondArray[i] == 50){
+                System.out.println("J'ai trouvé mon " + secondArray[i] + "!");
+                break;
+            }
+            System.out.println("J'en suis à " + secondArray[i] + " ...");
+        }
+
+        for(int i=0; i < 10; i++){
+            if(i == 2 || i == 5){
+                continue;
+            }
+            System.out.println("Valeur de i : " + i +".");
+        }
     }
 
     static void bonjour(String nom){
