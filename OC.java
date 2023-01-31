@@ -8,5 +8,9 @@ public class OC {
         exemple = exemple.replace("HELL", "YEAH");
 
         System.out.println(exemple);
+
+        OCOne ocone = new OCOne();
+
+        System.out.println("je fais de l'exemple " + ocone.exemple);
     }
 }
