@@ -1,5 +1,6 @@
 public class OCBoucle {
     public static void main(String[] args){
+        int e = 0;
         bonjour("vincent");
 
         for(int i=0; i<=1000; i++){
@@ -13,9 +14,23 @@ public class OCBoucle {
         for(int numberToArray: myArray){
             System.out.println(numberToArray);
         }
+
+        while(e < 90){
+            e =  randomNumber();
+            
+            print(e);
+        }
     }
 
     static void bonjour(String nom){
         System.out.println("Bonjour " + nom + " !!");
+    }
+
+    static void print(int nombre){
+        System.out.println("Nombre : " + Integer.toString(nombre));
+    }
+
+    static int randomNumber(){
+        return (int) ((Math.random() * ((100-1) + 1)) + 1);
     }
 }
