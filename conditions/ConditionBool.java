@@ -36,6 +36,24 @@ public class ConditionBool{
             default:
                 console("default");
         }
+
+        Direction direction = Direction.north;
+
+        switch(direction){
+            case north:
+                System.out.println("North");
+                break;
+            case east:
+                System.out.println("East");
+                break;    
+            case south:
+                System.out.pritnln("South");
+                break;
+            case west:
+                System.out.println("West");
+                break;
+        }
+
     }
 
     // afichage text des condition
@@ -53,5 +71,13 @@ public class ConditionBool{
     static boolean weather(String first, String second){
 
         return first.equals(second);
+    }
+}
+
+public class myDirection {
+    // lister les point cardinaux
+
+    enum Direction{
+        north, east, south, west;
     }
 }
