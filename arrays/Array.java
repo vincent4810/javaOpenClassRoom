@@ -1,8 +1,16 @@
 package arrays;
 
-// import des class List et ArrayList pour pouvoir utiliser les outils de ces class List et ArrayList
+// import des class List et ArrayList pour pouvoir utiliser les outils de ces class List, ArrayList, Set et HashSet
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+// Map HashMap
+
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 public class Array{
 
@@ -35,6 +43,7 @@ public class Array{
         }
 
         // En java il existe des liste pour créer des sorte de tableau mais sans taille fixe
+        // Liste ordonnée avec index commençant a zero 0
 
         List<String> maListe = new ArrayList<String>();
             // .add ajoute à une liste
@@ -54,5 +63,44 @@ public class Array{
                 System.out.println(result);
             }
 
+
+            // Set Liste non-ordonnées
+
+            Set<String> ingredients = new HashSet<String>();
+
+            ingredients.add("Lait");
+            ingredients.add("Farine");
+            ingredients.add("Oeuf");
+            ingredients.add("Chocolat");
+
+            for(String result: ingredients){
+                System.out.println(result);
+            }
+
+            // Dictionnaire /map
+
+            //Dictionnaire map est équivalent au tableau clef valeur en php 
+
+            Map<String, Integer> map = new HashMap<String, Integer>();
+            // .put equivaut a .add 
+            map.put("Jean", 34);
+            map.put("Anais", 35);
+
+            map.put("Jean", 89);
+            // .get accede a la valeur une fois quel'on a donné la clef
+            System.out.println(map.get("Anais"));
+
+            // methode .put permet d'ajouter une paire clef valeur(s)
+            for(Map.Entry<String, Integer> entry : map.entrySet()){
+                printEntry(entry);
+            }
+
+    }
+
+    //Affiche une entrée d'un dictionnaire
+
+    static void printEntry(Map.Entry entry){
+        // .getKey() acces a la clef  .getValue() acces a la valeur 
+        System.out.println(entry.getKey() + " ->" + entry.getValue());
     }
 }
